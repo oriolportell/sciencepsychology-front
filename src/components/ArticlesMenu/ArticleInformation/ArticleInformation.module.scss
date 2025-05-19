@@ -1,0 +1,42 @@
+
+.container {
+    margin: 0 auto;
+    background-color: #EDEAF3;
+    display: block;
+    padding: 2rem 3rem 3rem 2rem;
+    .title {
+        font-size: 36;
+        font-weight: normal;
+        font-family: 'Poppins';
+    }
+    .foterContainer {
+        display: flex;
+        .row {
+            display: flex;
+            .icon {
+                margin-right: 1rem;
+                width: auto;
+                height: 1.8rem;
+                }
+        }
+    }
+    .descriptionImageContainer {
+        display: flex;
+        gap: 2rem;
+        .imageContainer {
+            margin: 0 auto;
+            width: 40%;
+        }
+        .descriptionContainer {
+            width: 60%;
+        }
+    }
+    .image {
+        width: auto;
+    }
+    .description {
+        font-weight: normal;
+        font-size: 24;
+        font-family: 'Poppins';
+    }
+}
