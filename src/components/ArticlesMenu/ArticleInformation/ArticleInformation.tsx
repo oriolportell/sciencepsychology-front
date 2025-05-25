@@ -1,9 +1,6 @@
 import styles from './ArticleInformation.module.scss';
 
-import creator from '../../../assets/icons/content.png'
-import updated from '../../../assets/icons/updated.png'
-
-export type ParamsQuestion = {
+export type ArticleInformation = {
     title: String;
     description: String;
     image: String;
@@ -12,31 +9,29 @@ export type ParamsQuestion = {
 }
 
 
-export const ArticleInformation = ({title, description, image, createdBy, lastUpdate}: ParamsQuestion) => {
+export const ArticleInformation = ({title, description, image, createdBy, lastUpdate}: ArticleInformation) => {
     return (
-        <>
-        <div className= {styles.container}> 
-            <h1 className={styles.title}>{title}</h1>
-            <span className={styles.descriptionImageContainer}>
-                <div className={styles.titleContainer}>
-                    <h2 className={styles.description}>{description}</h2>
-                </div>
+        <article className= {styles.container}> 
+            <main className={styles.descriptionImageContainer}>
                 <div className={styles.imageContainer}>
                     <img src={image}></img>
                 </div>
-            </span>
-            <span className={styles.foterContainer}>
-                <div className={styles.row}>
-                    <p>{createdBy}</p>
-                    <img src={creator} className={styles.icon} />
+                <div className={styles.titleContainer}>
+                    <h1 className={styles.title}>{title}</h1>
+                    <h2 className={styles.description}>{description}</h2>
+                    <div className={styles.foterContainer}>
+                        <div className={styles.row}>
+                            <img src='/assets/icons/content.png' className={styles.icon} />
+                            <p className={styles.footerText}>Created by: {createdBy}</p>
+                        </div>
+                        <div className={styles.row}>
+                            <img src='/assets/icons/updated.png' className={styles.icon} />
+                            <p className={styles.footerText}>Last update: {lastUpdate}</p>
+                        </div>
+                    </div>
                 </div>
-                <div className={styles.row}>
-                    <p>{lastUpdate}</p>
-                    <img src={updated} className={styles.icon} />
-                </div>
-            </span>
-        </div>
-        </>
+            </main>
+        </article>
     )
 }
 

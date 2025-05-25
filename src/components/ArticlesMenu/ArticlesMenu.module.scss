@@ -1,7 +1,9 @@
 .container {
-    margin: 0 auto;
-    margin: 10rem 20rem 10rem 20rem;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; // Ajusta el valor según el espacio deseado
+    margin: 10rem 18rem;
+  }
 
 @media (max-width: "768px") {
     .container {

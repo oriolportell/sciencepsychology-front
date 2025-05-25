@@ -1,4 +1,5 @@
-import { ArticlesMenu } from "./pages/ArticlesMenu/ArticlesMenu";
+import ArticlesMenu from "../components/ArticlesMenu/ArticlesMenu";
+
 
 export default function App() {
     return(
